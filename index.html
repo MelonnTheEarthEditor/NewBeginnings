@@ -30,6 +30,13 @@ hi {
 
 hii {
   font-size: 60px;
+  filter: drop-shadow(0 0 2px white);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
 }
 
 tw-story[tags~="files"] {
@@ -39,6 +46,9 @@ tw-story[tags~="files"] {
   background-size: 50% 100%;
   background-position-Y: 0px;
   background-position-X: 380px;
+  opacity: 0;
+  background-color: black;
+  animation: fadeIn 0.5s ease-in-out 0.5s forwards;
 }
 
 
@@ -52,7 +62,52 @@ f2 {
 
 f3 {
   padding-left: 200px;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Loading" tags="" position="1150,550" size="100,100">(set: _current to 0)
+}
+
+dp {
+	filter: drop-shadow(0 0 2px white);
+}
+
+dpdg {
+	filter: drop-shadow(0 0 2px darkgreen);
+}
+
+dpg {
+	filter: drop-shadow(0 0 2px green);
+}
+
+dpyg {
+	filter: drop-shadow(0 0 2px yellowgreen);
+}
+
+dphp {
+	filter: drop-shadow(0 0 2px hotpink);
+}
+
+dpp {
+	filter: drop-shadow(0 0 2px pink);
+}
+
+tw-passage {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+dpr {
+	filter: drop-shadow(0 0 2px darkred);
+}
+
+dpo {
+	filter: drop-shadow(0 0 2px orange);
+}
+
+dppp {
+	filter: drop-shadow(0 0 2px purple);
+}
+
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Loading" tags="" position="1150,550" size="100,100">(set: _current to 0)
 (set: _max to 100)
 (set: _load to &quot;_current/_max&quot;)
 (set: _done to &quot;Done Loading&quot;)
@@ -82,7 +137,7 @@ f3 {
 
 
 
-(t8n-arrive: &quot;fade&quot;)+(after:8s)[(t8n-time:3s)+(t8n-depart: &quot;dissolve&quot;)(goto: &quot;image&quot;)]</tw-passagedata><tw-passagedata pid="3" name="image" tags="" position="1400,550" size="100,100">
+(t8n-arrive: &quot;fade&quot;)+(after:8s)[(t8n-time:3s)+(t8n-depart: &quot;dissolve&quot;)(goto: &quot;Welcome&quot;)]</tw-passagedata><tw-passagedata pid="3" name="Welcome" tags="" position="1400,550" size="100,100">
 
 (align:&quot;=&gt;&lt;=&quot;)[(after: 1.5s) + (t8n: &quot;fade&quot;) + (t8n-time: 3s)[&lt;h3&gt;Welcome to...&lt;/h3&gt;]]
 
@@ -110,14 +165,14 @@ f3 {
 
 (enchant: &quot;Play Now&quot;, (text-color:green) + (font: &quot;Luckiest Guy&quot;))
 (enchant: &quot;Play Now | The Escape to a&quot;, (text-color: &quot;white&quot;)+(font: &quot;Luckiest Guy&quot;))
-(enchant: &quot;New Beginning&quot;, (text-color: &quot;#FFD700&quot;)+(font: &quot;Marker Felt&quot;))</tw-passagedata><tw-passagedata pid="5" name="Start of the Game" tags="" position="1650,550" size="100,100">(set: _t to (t8n: &quot;fade&quot;)+(t8n-time: 1.5s))
+(enchant: &quot;New Beginning&quot;, (text-color: &quot;black&quot;)+(font: &quot;Marker Felt&quot;))</tw-passagedata><tw-passagedata pid="5" name="Start of the Game" tags="" position="1650,550" size="100,100">(set: _t to (t8n: &quot;fade&quot;)+(t8n-time: 1.5s))
 (after:1s)+_t[Hello Troubled One...]
-(after:2s)+_t[What brings you here?]
+(after:2.5s)+_t[What brings you here?]
 
 
 
 
-(after:3s)+_t[(t8n-depart: &quot;dissolve&quot;)+(t8n-time: 1.5s)[[[I am here to start my New Beginning|start]]]]</tw-passagedata><tw-passagedata pid="6" name="start" tags="" position="1650,675" size="100,100">(set: _t to (t8n: &quot;fade&quot;)+(t8n-time: 1.5s))
+(after:4s)+_t[(t8n-depart: &quot;dissolve&quot;)+(t8n-time: 1.5s)[(color: black)[[[&lt;dp&gt;I am here to start my New Beginning&lt;/dp&gt;|start]]]]]</tw-passagedata><tw-passagedata pid="6" name="start" tags="" position="1650,675" size="100,100">(set: _t to (t8n: &quot;fade&quot;)+(t8n-time: 1.5s))
 
 
 
@@ -125,16 +180,18 @@ f3 {
 
 _t+(align: &quot;&lt;==&gt;&quot;)[//If you didn&#39;t know already, this is an escape room type game.//]
 
-(t8n-arrive: &quot;fade&quot;)+(after:3s)[(t8n-time:1.5s)+(t8n-depart: &quot;dissolve&quot;)(goto: &quot;First Trial&quot;)]</tw-passagedata><tw-passagedata pid="7" name="First Trial" tags="" position="1775,675" size="100,100">(after:1s)+(t8n: &quot;fade-right&quot;)+(t8n-time: 2s)+(color:gray)[//Your first trial to a New Begginings awaits you.//]
+(t8n-arrive: &quot;fade&quot;)+(after:3s)[(t8n-time:1.5s)+(t8n-depart: &quot;dissolve&quot;)(goto: &quot;First Trial&quot;)]</tw-passagedata><tw-passagedata pid="7" name="First Trial" tags="" position="1775,675" size="100,100">(after:1s)+(t8n: &quot;fade-right&quot;)+(t8n-time: 2s)+(color:black)[//&lt;dp&gt;&#39;&#39;Your first trial to a New Begginings awaits you.&#39;&#39;&lt;/dp&gt;//]
 
-(after:2s)+(t8n: &quot;fade-left&quot;)+(t8n-time: 2s)[Your first task is to figure out the password to enter the next trial.
-There seems to be 3 files, lets check them out.]
+(color: &quot;green&quot;)[(after:1.5s)+(t8n: &quot;fade-left&quot;)+(t8n-time: 2s)[&lt;dpdg&gt;&#39;&#39;Your first task is to figure out the password to enter the next trial.
+There seems to be 3 files, lets check them out.&#39;&#39;&lt;/dpdg&gt;]]
 
-(after:3s)+(t8n: &quot;zoom&quot;)+(t8n-time:2s)[(input: bind _password, &quot;X====&quot;)](after:3s)[(color:white)+(t8n: &quot;zoom&quot;)+(t8n-time:2s)[(link-rerun: &quot;Submit | &quot;)[(if:_password is &quot;13512151414&quot;)[(color: red)+(font: &quot;Luckiest Guy&quot;)[[[Goto Next Trial|nexttrial]]]]]]]
+(after:2s)+(t8n: &quot;fade-down&quot;)+(t8n-time:2s)[(input: bind _password, &quot;X====&quot;)](after:2s)[(color:green)+(t8n: &quot;fade-up&quot;)+(t8n-time:2s)[(link-rerun: &quot;Submit&quot;)[(if:_password is &quot;13512151414&quot;)[(color: black)+(font: &quot;Luckiest Guy&quot;)[ | [[&lt;dpg&gt;Goto Next Trial|Second Trial]]&lt;/dpg&gt;]]]]]
 
-(after: 3.3s)+(t8n: &quot;flicker&quot;)+(t8n-time:2s)+(color:&quot;white&quot;)[(t8n-depart: &quot;fade&quot;)+(t8n-time: 2s)[[[File 1|file1]] | [[File 2|file2]] | [[File 3|file3]]]]
+(after: 2s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:&quot;black&quot;)[(t8n-depart: &quot;fade&quot;)+(t8n-time: 2s)[&lt;dpyg&gt;[[File 1|file1]] | [[File 2|file2]] | [[File 3|file3]]&lt;/dpyg&gt;]]
 
-</tw-passagedata><tw-passagedata pid="8" name="file1" tags="files" position="1650,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f1&gt;File One: Our &quot;New Beginning&quot;&lt;/f1&gt;//&#39;&#39;]
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))
+(enchant: ?Link, (t8n-arrive: &quot;fade&quot;))</tw-passagedata><tw-passagedata pid="8" name="file1" tags="files" position="1650,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f1&gt;File One: Our &quot;New Beginning&quot;&lt;/f1&gt;//&#39;&#39;]
 
 
 
@@ -148,7 +205,9 @@ There seems to be 3 files, lets check them out.]
 (after: 2s)[(color:gray)[[[File 2|file2]]
 [[File 3|file3]]
 [[To Pas
-sword|First Trial]]]]</tw-passagedata><tw-passagedata pid="9" name="file3" tags="files" position="1900,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f3&gt;File Three: Is there even a &quot;New beginning&quot;?&lt;/f3&gt;//&#39;&#39;]
+sword|First Trial]]]]
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))</tw-passagedata><tw-passagedata pid="9" name="file3" tags="files" position="1900,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f3&gt;File Three: Is there even a &quot;New beginning&quot;?&lt;/f3&gt;//&#39;&#39;]
 
 
 
@@ -162,7 +221,9 @@ sword|First Trial]]]]</tw-passagedata><tw-passagedata pid="9" name="file3" tags=
 (after: 2s)[(color:gray)[[[File 1|file1]]
 [[File 2|file2]]
 [[To Pas
-sword|First Trial]]]]</tw-passagedata><tw-passagedata pid="10" name="file2" tags="files" position="1775,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f2&gt;File Two: Melonn&#39;s &quot;New Beginning&quot;&lt;/f2&gt;//&#39;&#39;]
+sword|First Trial]]]]
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))</tw-passagedata><tw-passagedata pid="10" name="file2" tags="files" position="1775,800" size="100,100">(t8n: &quot;fade-right&quot;)+(t8n-time:2s)+(color:black)+(font: &quot;Luckiest Guy&quot;)[&#39;&#39;//&lt;f2&gt;File Two: Melonn&#39;s &quot;New Beginning&quot;&lt;/f2&gt;//&#39;&#39;]
 
 
 
@@ -176,7 +237,163 @@ sword|First Trial]]]]</tw-passagedata><tw-passagedata pid="10" name="file2" tags
 (after: 2s)[(color:gray)[[[File 1|file1]]
 [[File 3|file3]]
 [[To Pas
-sword|First Trial]]]]</tw-passagedata><tw-passagedata pid="11" name="nexttrial" tags="" position="1775,925" size="100,100"></tw-passagedata></tw-storydata>
+sword|First Trial]]]]
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="11" name="Second Trial" tags="" position="1775,925" size="100,100">(color: black)[(after: 1s)+(t8n: &quot;blur&quot;)+(t8n-time:1s)[//&#39;&#39;&lt;dp&gt;Welcome to the next trial wanderer. This trial we will put you through hardships that would make you cry. Good Luck.&lt;/dp&gt;&#39;&#39;//]]
+
+(color: &quot;pink&quot;)[(after: 1.5s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)[&#39;&#39;//&lt;dphp&gt;Your second trial will not be an easy one. You must first go through 6 stages, complete the mini-games, and collect the letter from the mini-games. After you collect them, you will arrang the letts in an order to unlock the next trial. Good Luck.&lt;/dphp&gt;//&#39;&#39;]]
+
+(color: &quot;hotpink&quot;)[(after: 2s)+(t8n:&quot;fade-up&quot;)+(t8n-time:1s)[&lt;dpp&gt;[[Stage 1|stage1]] | [[Stage 2|stage2]] | [[Stage 3|stage3]] | [[Stage 4|stage4]] | [[Stage 5|stage5]] | [[Stage 6|stage6]]&lt;/dpp&gt;]]
+
+(color:&quot;hotpink&quot;)+(t8n: &quot;fade-left&quot;)+(after:2.3s)[&lt;dpp&gt;Password:&lt;/dpp&gt;]
+(after:2.5s)[(color: &quot;pink&quot;)+(t8n: &quot;fade&quot;)[(input: bind _password, &quot;X====&quot;)(link-rerun: &quot;Sumbit&quot;)[
+(if: _password is &quot;Fembro&quot; or &quot;fembro&quot; or &quot;FEMBRO&quot;)[
+[[Goto Third Trial|Third Trial]]]]]]
+
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))
+</tw-passagedata><tw-passagedata pid="12" name="stage1" tags="" position="1450,1050" size="100,100">(after:1s)[(t8n: &quot;fade&quot;)+(t8n-time:1s)[(color: black)[//&#39;&#39;&lt;dp&gt;Welcome to the first stage. Good Luck.&lt;/dp&gt;&#39;&#39;//]]]
+
+(after:1.5s)[(color:&quot;hotpink&quot;)+(t8n:&quot;slide-down&quot;)+(t8n-time:1.5s)[//&lt;dpp&gt;First stage is an easy one, I am going to show a part of a song, all you have to do is guess the name of the song and type it in.&lt;/dpp&gt;//]]
+
+(after:1.8s)[(color:&quot;pink&quot;)+(t8n:&quot;blur&quot;)+(t8n-time:1.5s)[&lt;dphp&gt;Song:
+&quot;They could describe everything with one single word.
+You know? Like...
+Boba Tea...&quot;
+
+That is all that i will show, can you guess it?&lt;/dphp&gt;]]
+
+(after:2s)+(t8n: &quot;flicker&quot;)+(color:&quot;pink&quot;)[Guess the Song:
+(input: bind _password, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[
+(if: _password is &quot;Gnarly&quot; or &quot;gnarly&quot;)[(show:?Message)
+[//&#39;&#39;The first letter of the password for the Second Trial is &quot;F&quot;.&#39;&#39;//]]]]
+(after: 2.3s)+(color:&quot;hotpink&quot;)+(t8n:&quot;slide-left&quot;)[[[Go Back|Second Trial]]]
+
+(enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))
+
+
+
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="13" name="stage2" tags="" position="1575,1050" size="100,100">(after:1s)+(t8n:&quot;fade&quot;)+(t8n-time:1s)+(color:black)[&lt;dp&gt;//&#39;&#39;Welcome to Stage 2 of 6. Good Luck.&#39;&#39;//&lt;/dp&gt;]
+
+(after:1.5s)+(t8n:&quot;fade-right&quot;)+(t8n-time:1s)+(color:&quot;gold&quot;)[&lt;dpg&gt;//&#39;&#39;For this stages trial, let&#39;s test your eyes. A 6 letter word will apear at random for a slit second, lets see if you catch that word. When you have the word, type the word in the password box for the second letter.&#39;&#39;//&lt;/dpg&gt;]
+
+
+(color: yellow)[(after:2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)[&#39;&#39;Password:&#39;&#39;]](color: &quot;yellow&quot;)[(after:2s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)[(input: bind _password, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[
+(if: _password is &quot;Roblox&quot; or &quot;roblox&quot;)
+[//&#39;&#39;The second letter of the Second Trial password is &quot;E&quot;.&#39;&#39;//]]]]
+
+(after: 2.5s)+(t8n: &quot;slide-right&quot;)+(t8n-time:1s)+(color: yellow)[(t8n-depart:&quot;dissolve&quot;)[[Go Back|Second Trial]]]
+
+(set: _word to &quot;Hello&quot;)(after:2.6s)[(live: 6.1s)[(set: _word to &quot;Roblox&quot;)]](after:2.6s)[(live:2.1s)[(set: _word to &quot;Must of been the wind...&quot;)]]
+(after:2.6s)+(color: black)+(t8n: &quot;fade-up&quot;)[(live: 0.1)[&lt;dp&gt;//_word&lt;/dp&gt;//]]
+
+
+
+
+
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="14" name="stage3" tags="" position="1700,1050" size="100,100">(after:1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:black)[//&#39;&#39;&lt;dp&gt;Welcome to stage 3 or 6. Good Luck.&lt;/dp&gt;&#39;&#39;//]
+
+(after:1.5s)+(t8n: &quot;fade-left&quot;)+(t8n-time:1s)+(color:red)[&lt;dpr&gt;Welcome to stage 3, this stage will test your mathmatical skills. All you have to do is solve the math problem and enter the answer in the box below.&lt;/dpr&gt;]
+
+(after:1.8s)+(t8n: &quot;flicker&quot;)+(t8n-time: 1s)+(color: &quot;darkred&quot;)[&#39;&#39;Equation: 
+A pet store has 10 puppies, including 4 poodles, 2 terriers, and 4 retrievers.  If Rebecka selects one puppy at random, the pet store replaces the puppy with one of the same breed, then Aaron selects a puppy at random.  Find the probability that they both select a poodle. &#39;&#39;]
+
+(after:2s)+(t8n: &quot;fade-up&quot;)+(t8n-time:1s)+(color: red)[&lt;dpr&gt;Answer:&lt;/dpr&gt;]
+(after: 2.1s)+(t8n: &quot;fade-down&quot;)+(t8n-time:1s)+(color:red)[(input: bind _solution, &quot;X=======&quot;)(link-rerun: &quot;Submit&quot;)[
+
+(if: _solution is &quot;0.16%&quot; or &quot;.16%&quot; or &quot;4/25&quot; or &quot;4 in 25&quot; or &quot;0.16&quot; or &quot;.16&quot;)[//&#39;&#39;The third letter for the Second Trial password is &quot;M&quot;.&#39;&#39;//]]]
+(after: 2.5s)+(t8n: &quot;fade-left&quot;)+(t8n-time:1s)+(color:&quot;darkred&quot;)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="15" name="stage4" tags="" position="1850,1050" size="100,100">(after:1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:black)[//&#39;&#39;&lt;dp&gt;Welcome to stage 4 of 6. Good Luck.&lt;/dp&gt;&#39;&#39;//]
+
+(after: 1.5s)+(t8n: &quot;slide-down&quot;)+(t8n-time:1s)+(color: orange)[&lt;dpo&gt;The 4th stage with me a test of your typing ability. You will type some text, and only have 2 minutes to do so. Dont even try highlighting the text, I disabled that.&lt;/dpo&gt;]
+
+(after:1.8s)+(t8n: &quot;slide-up&quot;)+(t8n-time: 1s)+(color: orange)[//Passage: &quot;Some people say that the thing that makes one gay, is the fact that they like the same gender. I don&#39;t see how me liking femboys is gay. I accepted that i&#39;m gay because of femboys, but it&#39;s also because, i like men.&quot;//]
+
+
+(set: $white to false)
+(after:2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:orange)[(link-reveal: &quot;Start Stage&quot;)[(set: $white to true)(after: 2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color: orange)[(input: bind _passage)(link-rerun: &quot;Sumbit&quot;)[
+(if: _passage is &quot;Some people say that the thing that makes one gay, is the fact that they like the same gender. I don&#39;t see how me liking femboys is gay. I accepted that i&#39;m gay because of femboys, but it&#39;s also because, i like men.&quot;)[The 4th letter of the Second Trial is &quot;B&quot;.]]](live: 1s)[
+  (set: $timeLeft to it - 1)(if: $timeLeft &gt; 0)[Time remaining: (floor: $timeLeft) seconds]
+  (else:)[
+    Time&#39;s up!
+    (stop:)+(go-to: &quot;stage4&quot;)
+  ]
+]
+
+(set: $timeLeft to 120)]]
+(after: 2.3s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:orange)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]
+
+
+
+
+
+
+
+</tw-passagedata><tw-passagedata pid="16" name="stage5" tags="passagee" position="1975,1050" size="100,100">(after: 1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color: black)[//&#39;&#39;&lt;dp&gt;Welcome to stage 5 of 6. Good Luck.&lt;/dp&gt;&#39;&#39;//]
+
+(after: 1.5s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:purple)[&lt;dppp&gt;Welcome to the 5th stage. In this stage you will be just luck based :3. I guess i&#39;ll give you a little break.&lt;/dppp&gt;]
+
+(set: $attempts to 0)
+
+(after:2s)+(t8n: &quot;fade-up&quot;)+(t8n-time: 1s)+(color: purple)[(link-rerun: &quot;//&#39;&#39;Roll the Dice!&#39;&#39;//&quot;)[
+(set: $attempts to it + 1)(set: $roll to (random: 1, 1000))(replace: ?result)[(if: $roll is 1)[
+      (go-to: &quot;GG&quot;)](else:)[
+      You rolled nothing, your trash bud. Try again!
+      Attempts: $attempts]]]
+
+|result&gt;[]]
+
+(after: 2.3s)+(t8n: &quot;slide-right&quot;)+(t8n-time:1s)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]
+</tw-passagedata><tw-passagedata pid="17" name="stage6" tags="" position="2100,1050" size="100,100">(after: 1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:black)[//&#39;&#39;&lt;dp&gt;You gotta be a dumbass to not know the last letter bro...&lt;/dp&gt;&#39;&#39;//]
+
+(after:1.5s)+(t8n: &quot;rumble&quot;)+(t8n-time:1s)+(color: white)[&lt;dp&gt;You legit should not me here bro. What ever...
+For the last stage, it&#39;s a scavenger hunt.
+Step 1: Search my user &quot;kameronrkd5&quot; display name &quot;Melonn&quot; on Roblox.
+Step 2: Go to creations and join my game &quot;12-Hour Button Sim&quot;.
+Step 3: Find out what the cost is for the Reset and enter it below.&lt;/dp&gt;]
+
+(after:1.8s)+(t8n: &quot;blur&quot;)+(t8n-time:1s)+(color:white)[(input: bind _password, &quot;X====&quot;)(link-rerun: &quot;Submit&quot;)[
+
+(if: _password is &quot;100 prestiges&quot; or &quot;100 Prestiges&quot; or &quot;100 prestige&quot; or &quot;100 Prestige&quot;)[You&#39;re literally the dumbest person i know to not know that the last fucking letter was &quot;O&quot;.]]]
+
+(after: 2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="18" name="Third Trial" tags="" position="1775,1175" size="100,100">
+
+
+
+
+
+
+
+
+
+
+
+
+(align: &quot;=&gt;&lt;=&quot;)[(after:1s)+(t8n: &quot;blur&quot;)+(t8n-time:1s)[//&#39;&#39;Congrats on beating Trial 1 and 2!!
+Trial 3
+Coming Soon...&#39;&#39;//]]</tw-passagedata><tw-passagedata pid="19" name="GG" tags="" position="1975,1150" size="100,100">(after:1s)+(t8n:&quot;flicker&quot;)+(t8n-time:1s)[GG, you got the 1 in 1000 chance, your luck is ight. That was light fr wasnt it?
+
+The 5th letter is &quot;R&quot;]
+
+(after: 1.5s)+(t8n: &quot;slide-right&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
