@@ -322,7 +322,7 @@ A pet store has 10 puppies, including 4 poodles, 2 terriers, and 4 retrievers.  
 (if: _solution is &quot;0.16%&quot; or &quot;.16%&quot; or &quot;4/25&quot; or &quot;4 in 25&quot; or &quot;0.16&quot; or &quot;.16&quot;)[//&#39;&#39;The third letter for the Second Trial password is &quot;M&quot;.&#39;&#39;//]]]
 (after: 2.5s)+(t8n: &quot;fade-left&quot;)+(t8n-time:1s)+(color:&quot;darkred&quot;)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="15" name="stage4" tags="" position="1850,1050" size="100,100">(after:1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:black)[//&#39;&#39;&lt;dp&gt;Welcome to stage 4 of 6. Good Luck.&lt;/dp&gt;&#39;&#39;//]
 
-(after: 1.5s)+(t8n: &quot;slide-down&quot;)+(t8n-time:1s)+(color: orange)[&lt;dpo&gt;The 4th stage with me a test of your typing ability. You will type some text, and only have 2 minutes to do so. Dont even try highlighting the text, I disabled that.&lt;/dpo&gt;]
+(after: 1.5s)+(t8n: &quot;slide-down&quot;)+(t8n-time:1s)+(color: orange)[&lt;dpo&gt;The 4th stage will be a test of your typing ability. You will type some text, and only have 2 minutes to do so. Dont even try highlighting the text, I disabled that.&lt;/dpo&gt;]
 
 (after:1.8s)+(t8n: &quot;slide-up&quot;)+(t8n-time: 1s)+(color: orange)[//Passage: &quot;Some people say that the thing that makes one gay, is the fact that they like the same gender. I don&#39;t see how me liking femboys is gay. I accepted that i&#39;m gay because of femboys, but it&#39;s also because, i like men.&quot;//]
 
@@ -348,11 +348,11 @@ A pet store has 10 puppies, including 4 poodles, 2 terriers, and 4 retrievers.  
 
 </tw-passagedata><tw-passagedata pid="16" name="stage5" tags="passagee" position="1975,1050" size="100,100">(after: 1s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color: black)[//&#39;&#39;&lt;dp&gt;Welcome to stage 5 of 6. Good Luck.&lt;/dp&gt;&#39;&#39;//]
 
-(after: 1.5s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:purple)[&lt;dppp&gt;Welcome to the 5th stage. In this stage you will be just luck based :3. I guess i&#39;ll give you a little break.&lt;/dppp&gt;]
+(after: 1.5s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:purple)[&lt;dppp&gt;Welcome to the 5th stage. In this stage it will be just luck based :3. I guess i&#39;ll give you a little break.&lt;/dppp&gt;]
 
 (set: $attempts to 0)
 
-(after:2s)+(t8n: &quot;fade-up&quot;)+(t8n-time: 1s)+(color: purple)[(link-rerun: &quot;//&#39;&#39;Roll the Dice!&#39;&#39;//&quot;)[
+(after:2s)+(t8n: &quot;fade-up&quot;)+(t8n-time: 1s)+(color: purple)[(link-rerun: &quot;//&#39;&#39;Test your Luck&#39;&#39;//&quot;)[
 (set: $attempts to it + 1)(set: $roll to (random: 1, 1000))(replace: ?result)[(if: $roll is 1)[
       (go-to: &quot;GG&quot;)](else:)[
       You rolled nothing, your trash bud. Try again!
