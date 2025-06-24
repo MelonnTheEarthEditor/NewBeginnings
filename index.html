@@ -186,7 +186,7 @@ There seems to be 3 files, lets check them out.&#39;&#39;&lt;/dpdg&gt;]]
 
 (after:2s)+(t8n: &quot;fade-down&quot;)+(t8n-time:2s)[(input: bind _password, &quot;X====&quot;)](after:2s)[(color:green)+(t8n: &quot;fade-up&quot;)+(t8n-time:2s)[(link-rerun: &quot;Submit&quot;)[(if:_password is &quot;13512151414&quot;)[(color: black)+(font: &quot;Luckiest Guy&quot;)[ | [[&lt;dpg&gt;Goto Next Trial|Second Trial]]&lt;/dpg&gt;]]]]]
 
-(after: 2s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:&quot;black&quot;)[(t8n-depart: &quot;fade&quot;)+(t8n-time: 2s)[&lt;dpyg&gt;[[File 1|file1]] | [[File 2|file2]] | [[File 3|file3]]&lt;/dpyg&gt;]]
+(after: 2s)+(t8n: &quot;flicker&quot;)+(t8n-time:1s)+(color:&quot;green&quot;)[(t8n-depart: &quot;fade&quot;)+(t8n-time: 2s)[&lt;dpyg&gt;[[File 1|file1]] | [[File 2|file2]] | [[File 3|file3]]&lt;/dpyg&gt;]]
 
 
 (enchant: ?Link, (t8n-depart:&quot;dissolve&quot;))
@@ -373,7 +373,44 @@ Step 3: Find out what the cost is for the Reset and enter it below.&lt;/dp&gt;]
 
 (if: _password is &quot;100 prestiges&quot; or &quot;100 Prestiges&quot; or &quot;100 prestige&quot; or &quot;100 Prestige&quot;)[You&#39;re literally the dumbest person i know to not know that the last fucking letter was &quot;O&quot;.]]]
 
-(after: 2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="18" name="Third Trial" tags="" position="1775,1175" size="100,100">
+(after: 2s)+(t8n: &quot;fade&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="18" name="Third Trial" tags="" position="1775,1175" size="100,100">(after:1s)+(t8n:&quot;fade&quot;)+(t8n-time:1s)+(color:black)[&lt;dp&gt;//&#39;&#39;Welcome to Trial 3. The Last and Final Trial to your, &quot;New Beginning&quot;.&#39;&#39;//&lt;/dp&gt;]
+
+(after:1.5s)+(t8n:&quot;fade-left&quot;)+(t8n-time:1s)+(color:&quot;darkred&quot;)[&#39;&#39;&lt;dpr&gt;This is your last and final trial to your new beginning. You know what that means, the last trial is going to be alot harder then the others. Good Luck.&lt;/dpr&gt;&#39;&#39;]
+
+(after:1.8s)+(t8n:&quot;flicker&quot;)+(t8n-time:1s)+(color:red)[What was the password of trial 1?
+(input: bind _firstpassword, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _firstpassword is &quot;13512151414&quot;)[
+
+Good. Now, what was the password of the second trial?
+(input: bind _secondpassword, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _secondpassword is &quot;fembro&quot; or &quot;Fembro&quot; or &quot;FEMBRO&quot;)[
+
+Good. Now, what were the colors of stage 1 in trial 2?
+(input: bind _stage1, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage1 is &quot;pink&quot; or &quot;Pink&quot;)[
+
+Good. Now, what were the colors of stage 2 in trial 2?
+(input: bind _stage2, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage2 is &quot;yellow&quot; or &quot;Yellow&quot;)[
+
+Good. Now, what were the colors or stage 3 in trial 2?
+(input: bind _stage3, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage3 is &quot;Red&quot; or &quot;red&quot;)[
+
+Good. Now, what were the colors of stage 4 in trial 2?
+(input: bind _stage4, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage4 is &quot;Orange&quot; or &quot;orange&quot;)[
+
+Good. Now, what were the colors of stage 5 in trial 2?
+(input: bind _stage5, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage5 is &quot;Purple&quot; or &quot;purple&quot;)[
+
+Good. Now, what were the colors of stage 6 in trial 2?
+(input: bind _stage6, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _stage6 is &quot;white&quot; or &quot;White&quot;)[
+
+Good boy or girl idk... Your doing GREAT last question.
+Who is the creator of this game that you are playing?
+(input: bind _creator, &quot;X=====&quot;)(link-rerun: &quot;Submit&quot;)[(if: _creator is &quot;Melonn&quot; or &quot;melonn&quot;)[
+
+Your pretty smart, well you gotta be to get here right?
+
+Your new beginning awaits you....
+
+
+(t8n-depart: &quot;blur&quot;)+(t8n-time:10s)[[A place of New Beginnings...|new]]]]]]]]]]]]]]]]]]]]]
 
 
 
@@ -386,13 +423,26 @@ Step 3: Find out what the cost is for the Reset and enter it below.&lt;/dp&gt;]
 
 
 
-(align: &quot;=&gt;&lt;=&quot;)[(after:1s)+(t8n: &quot;blur&quot;)+(t8n-time:1s)[//&#39;&#39;Congrats on beating Trial 1 and 2!!
-Trial 3
-Coming Soon...&#39;&#39;//]]</tw-passagedata><tw-passagedata pid="19" name="GG" tags="" position="1975,925" size="100,100">(after:1s)+(t8n:&quot;flicker&quot;)+(t8n-time:1s)[GG, you got the 1 in 1000 chance, your luck is ight. That was light fr wasnt it?
+</tw-passagedata><tw-passagedata pid="19" name="GG" tags="" position="1975,925" size="100,100">(after:1s)+(t8n:&quot;flicker&quot;)+(t8n-time:1s)[GG, you got the 1 in 1000 chance, your luck is ight. That was light fr wasnt it?
 
 The 5th letter is &quot;R&quot;]
 
-(after: 1.5s)+(t8n: &quot;slide-right&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata></tw-storydata>
+(after: 1.5s)+(t8n: &quot;slide-right&quot;)+(t8n-time:1s)+(color:white)[(t8n-depart: &quot;dissolve&quot;)[[Go Back|Second Trial]]]</tw-passagedata><tw-passagedata pid="20" name="new" tags="" position="1775,1300" size="100,100">(after: 10s)+(t8n: &quot;flicker&quot;)+(t8n-time:5s)[You have made it... to a new... begin..ning.........]
+
+(after: 17s)+(t8n: &quot;blur&quot;)+(t8n-time:5s)[R....un....]
+
+(after:24s)+(t8n:&quot;fade&quot;)+(t8n-time:5s)+(color:red)[(t8n-depart:&quot;flicker&quot;)[[RUN!!|Bad Ending]]]
+
+(after:60s)[(go-to: &quot;Good Ending&quot;)]</tw-passagedata><tw-passagedata pid="21" name="Good Ending" tags="" position="1850,1425" size="100,100">(after:1s)[You stayed, good.
+Welcome to your TRUE new beginning, Traveler]
+
+(after:5s)[Your beat the game GGs. You dont get nothing from beating this game. :3 SEE YOU IN THE NEXT GAME I MAKE :3333333]
+
+(after:15s)[(go-to: &quot;playscreen&quot;)]</tw-passagedata><tw-passagedata pid="22" name="Bad Ending" tags="" position="1700,1425" size="100,100">(after:1s)+(t8n:&quot;fade&quot;)[I said don&#39;t run... Remember...]
+
+(after:1.5s)+(t8n:&quot;blur&quot;)[You Failed...]
+
+(after: 5s)[(go-to: &quot;playscreen&quot;)]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
